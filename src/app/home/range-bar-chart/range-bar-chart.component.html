@@ -1,0 +1,45 @@
+<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+  <kendo-chart style="width: 500px; height: 500px;">
+    <kendo-chart-title text="Correctivos por Analista"></kendo-chart-title>
+    <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [categories]="['EOA', 'HHCL', 'DLA', 'AJP']" >
+      </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+    <kendo-chart-series>
+      <kendo-chart-series-item type="column" [gap]="2" [spacing]=".25" [data]="[59, 100, 60, 148]">
+      </kendo-chart-series-item>
+      <kendo-chart-tooltip>
+        <ng-template kendoChartSeriesTooltipTemplate let-value="value">
+          {{ value }}
+        </ng-template>
+      </kendo-chart-tooltip>
+    </kendo-chart-series>
+  </kendo-chart>
+  <mat-list>
+    <div mat-subheader>Descripción</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people_outline</mat-icon>
+      <div mat-line>EOA - Emilio Ortiz Agular &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="color:cornflowerblue;">60</span>
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people_outline</mat-icon>
+      <div mat-line>HHCL - Hector Hugo Cluz Lara  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="color:cornflowerblue;">100</span>
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people_outline</mat-icon>
+      <div mat-line>DLA - Diego Lugo Alcantara  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="color:cornflowerblue;">60</span>
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people_outline</mat-icon>
+      <div mat-line>AJP - Angelica Jaqueline Patiño  &nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="color:cornflowerblue;">148</span>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

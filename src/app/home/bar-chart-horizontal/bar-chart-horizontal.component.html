@@ -1,0 +1,46 @@
+<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+  <kendo-chart style="width: 600px; height: 400px;">
+    <kendo-chart-title text="Proveedores"></kendo-chart-title>
+    <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [categories]="['T.', 'F.T.', 'S.A.']" >
+      </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+    <kendo-chart-series>
+      <kendo-chart-series-item type="column" [gap]="2" [spacing]=".25" [data]="[2, 1, 4]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="column" [data]="[13, 13, 61]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="column" [data]="[3, 0, 2]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="column" [data]="[4, 3, 70]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="column" [data]="[2, 4, 28]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="column"  [data]="[0, 2, 2]">
+      </kendo-chart-series-item>
+      <kendo-chart-tooltip>
+        <ng-template kendoChartSeriesTooltipTemplate let-value="value">
+          {{ value }}
+        </ng-template>
+      </kendo-chart-tooltip>
+    </kendo-chart-series>
+  </kendo-chart>
+  <mat-list>
+    <div mat-subheader>Descripción</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>bar_chart</mat-icon>
+      <div mat-line>T</div>
+      <div mat-line>En Tiempo</div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>bar_chart</mat-icon>
+      <div mat-line>F.T.</div>
+      <div mat-line>Fuera de Tiempo</div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>bar_chart</mat-icon>
+      <div mat-line>S.A.</div>
+      <div mat-line>Sin Atender</div>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,73 @@
+<div class='d-flex flex-row flex-wrap justify-content-center align-items-center' style="width: 1200px;">
+  <kendo-grid [data]="gridData" [height]="300" scrollable="scrollable">
+    <!-- VERSIÓN CELULAR   -->
+    <kendo-grid-column media="(max-width: 771px)" title="Datos">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <dl>
+          <div class="d-flex flex-row ">
+            <div class="d-flex flex-column mr-auto text-left">
+              <dt>Año Anterior</dt>
+              <dd>{{dataItem.AnioAnterior}}</dd>
+
+              <dt>Semana Anterior</dt>
+              <dd>{{dataItem.SemanaAnterior}}</dd>
+
+              <dt>Zona</dt>
+              <dd>{{dataItem.Zona}}</dd>
+            </div>
+          </div>
+        </dl>
+      </ng-template>
+    </kendo-grid-column>
+
+    <!--  VERSIÓN NORMAL PC  -->
+    <kendo-grid-column media="(min-width: 771px)" field="AnioAnterior" title="Año anterior" [width]="150" [locked]="false">
+      <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+        275
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column media="(min-width: 771px)" field="SemanaAnterior" title="Semana anterior" [width]="150" [locked]="false">
+      <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+        216
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column media="(min-width: 771px)" field="SemanaElegida" title="Semana elegida" [width]="150" [locked]="false" >
+      <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+        212
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column media="(min-width: 771px)" field="Zona" title="Zona" [width]="150" [locked]="false">
+      <ng-template kendoGridFooterTemplate let-column let-dataItem let-columnIndex="columnIndex">
+        Total:
+      </ng-template>
+    </kendo-grid-column>
+
+    <!-- Comienza agrupación de columnas  -->
+    <kendo-grid-column-group title="Cambio vs Semana anterior" [width]="200" [locked]="false">
+      <kendo-grid-column media="(min-width: 771px)" field="SA1" title="#" [width]="100" [locked]="false">
+        <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+          4
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column media="(min-width: 771px)" field="SA2" title="%" [width]="100" [locked]="false">
+        <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+          1.9%
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid-column-group>
+
+    <!-- Comienza agrupación de columnas  -->
+    <kendo-grid-column-group title="Cambio vs Año anterior" [width]="200" [locked]="false">
+      <kendo-grid-column media="(min-width: 771px)" field="AA1" title="#" [width]="100" [locked]="false">
+        <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+          63
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column media="(min-width: 771px)" field="AA2" title="%" [width]="100" [locked]="false">
+        <ng-template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+          22.9%
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid-column-group>
+  </kendo-grid>
+</div>

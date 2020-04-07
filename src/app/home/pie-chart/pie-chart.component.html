@@ -1,0 +1,16 @@
+<kendo-chart title="Responsable de atención">
+  <kendo-chart-legend position="bottom"></kendo-chart-legend>
+  <kendo-chart-series>
+    <kendo-chart-series-item
+      [autoFit]="true"
+      type="pie"
+      [data]="pieData"
+      field="value"
+      width="700px"
+      categoryField="category"
+      [labels]="{ visible: true, content: labelContent }"
+      color="#000"
+    >
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+</kendo-chart>
